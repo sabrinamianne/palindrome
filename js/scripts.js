@@ -5,12 +5,14 @@ $(document).ready(function(){
    var user_answer = $("input#palindrome_user").val();
    var i;
    var sentence = " ";
-
-   for ( i = user_answer.length - 1 ; i>= 0 ; i--) {
-    sentence += user_answer[i];
+   function palindrome (str) {
+   for ( i = str.length - 1 ; i>= 0 ; i--) {
+    sentence += str[i];
    }
+   return sentence;
+ }
 
-   $("#finalResult").text(sentence);
+   $("#finalResult").text(palindrome(user_answer));
    $("#hidden").show();
  });
  });
